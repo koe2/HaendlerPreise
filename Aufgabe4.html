@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aufgabe 04</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="calc.js"></script>
 </head>
 <body>
    <Main>
@@ -13,9 +14,35 @@
        </header>
        <section>
            <form action="">
-               
+               <table>
+                   <tr>
+                       <td>Wie viele Schrauben?</td>
+                       <td><input type="number" id="iSchraube"></td>
+                   </tr>
+                   <tr>
+                        <td>Wie viele Muttern?</td>
+                        <td><input type="number" id="iMutter"></td>
+                   </tr>
+                   <tr>
+                        <td>Wie viele Unterlegsscheiben?</td>
+                        <td><input type="number" id="iScheibe" ></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="button" id="submit">Absenden</button> <!-- type="button" ist notwending, da ohne type deklaration dieser als "submit" angesehen wird! -->
+                            <script>
+                                document.getElementById("submit").addEventListener("click", test);
+                            </script> 
+                            <button type="reset">Formular löschen</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="result">
+                        </td>  
+                    </tr>
+               </table>
            </form>
        </section>
-   </Main> 
+   </Main>
 </body>
 </html>
