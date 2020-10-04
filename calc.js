@@ -1,4 +1,4 @@
-  function test() {
+  function calcTotal() {
     var preis = {
         //in Rappen
         schraube: 20,
@@ -10,4 +10,10 @@
     var totalScheibe = document.getElementById("iScheibe").value * preis.unterleg;
     var result = document.getElementById("result");
     result.innerText = "Preis Total: "+ ((totalSchraube + totalMutter + totalScheibe) / 100).toFixed(2);
+  }
+
+  function resetTotal()
+  {
+    var result = document.getElementById("result");
+    result.innerText = "Preis Total: 0.00";
   }

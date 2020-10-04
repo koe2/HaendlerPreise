@@ -29,10 +29,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <button type="button" id="submit">Absenden</button> <!-- type="button" ist notwending, da ohne type deklaration dieser als "submit" angesehen wird! -->
-                            <script>
-                                document.getElementById("submit").addEventListener("click", test);
-                            </script> 
+                            <button type="submit">Absenden</button> <!-- type="button" ist notwending, da ohne type deklaration dieser als "submit" angesehen wird! -->
                             <button type="reset">Formular löschen</button>
                         </td>
                     </tr>
@@ -44,5 +41,11 @@
            </form>
        </section>
    </Main>
+   <script>
+        document.getElementById("iSchraube").addEventListener("keyup", calcTotal);
+        document.getElementById("iMutter").addEventListener("keyup", calcTotal);
+        document.getElementById("iScheibe").addEventListener("keyup", calcTotal);
+        document.addEventListener("reset", resetTotal); // muss seperate funktion sein. Leher fragen.
+    </script>
 </body>
 </html>
